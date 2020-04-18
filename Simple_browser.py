@@ -34,21 +34,31 @@ def showUrl(url):
         web.load(QUrl(url))
         web.show()
         web.activateWindow()
-        sys.exit(app.exec_())  
+        return app.exec_()
 
 def Visit_site(web):
         sites = {'ytb': 'http://youtube.com', 'ggl': 'http://google.com','ghb':'http://github.com/',}
-        return sites.get(web, web)
+        return sites.get(web, 'http://' + web)
          
 
 
 try:
     if  len(sys.argv) >1 :
         website = (sys.argv[1]).lower()
-        showUrl(Visit_site(website))
+        window_status = showUrl(Visit_site(website)) 
     else:
-        showUrl('http://google.com')
-except:
+        window_status = showUrl(Visit_site('ggl'))
+
+    while window_status == 0:
+        print("\nOpen new website - Y. Exit - N ?")
+        if str(input()).lower() == 'y':
+            print("\nEnter new website url Ex - 'example.com'  or for frequent websites like google, youtube, github just type ggl, ytb, ghb")
+            website = str(input()).lower()
+            window_status = showUrl(Visit_site(website))
+        else:
+            print("\nClosing browser!")
+            break      
+finally:
     print("\nBrowser closed !!!")
     sys.exit()
 
