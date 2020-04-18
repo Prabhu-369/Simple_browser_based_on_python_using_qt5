@@ -44,7 +44,7 @@ def Visit_site(web):
 
 try:
     if  len(sys.argv) >1 :
-        website = (sys.argv[1]).lower()
+        website = str(sys.argv[1]).lower()
         window_status = showUrl(Visit_site(website)) 
     else:
         window_status = showUrl(Visit_site('ggl'))
