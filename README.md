@@ -7,7 +7,9 @@ Requirements:
 This program needs 'PyQt5' and 'PyQt5.qtwebengine'for its UI
 
 Installation:
+
 sudo apt-get install python3-pyqt5
+
 sudo apt-get install python3-pyqt5.qtwebengine
 
 Usage:
