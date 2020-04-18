@@ -37,7 +37,7 @@ def showUrl(url):
         return app.exec_()
 
 def Visit_site(web):
-        sites = {'ytb': 'http://youtube.com', 'ggl': 'http://google.com','ghb':'http://github.com/',}
+        sites = {'ytb': 'http://youtube.com', 'ggl': 'http://google.com', 'ghb': 'http://github.com/', 'tmgntl' : 'http://tamilgun.show/tamil/', 'tmgntg' : 'https://v100v.net/category/telugu/'}
         return sites.get(web, 'http://' + web)
          
 
@@ -52,7 +52,7 @@ try:
     while window_status == 0:
         print("\nOpen new website - Y. Exit - N ?")
         if str(input()).lower() == 'y':
-            print("\nEnter new website url Ex - 'example.com'  or for frequent websites like google, youtube, github just type ggl, ytb, ghb")
+            print("\nEnter new website url Ex - 'example.com'  or for frequent websites like google, youtube, github, tamilgun - tamil & telugu just type ggl, ytb, ghb, tmgntl or tmgntg")
             website = str(input()).lower()
             window_status = showUrl(Visit_site(website))
         else:
