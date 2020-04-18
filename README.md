@@ -17,8 +17,8 @@ Usage:
 2. Navigate to folder containing
 3. Launch the browser - python3 Simple_browser.py  
 4. The above command will launch google page by default.
-5. Incase you want to open some other page in startup. Run - python3 Simple_browser.py "example-url.com"
-6. This can be called from another python program by using. os.system("python Simple_browser.py "example-url.com")
+5. Incase you want to open some other page in startup. Run - python3 Simple_browser.py example-url.com
+6. This can be called from another python program by using. os.system("python Simple_browser.py example-url.com)
 7. Once the window is closed the program will ask for user choice to exit the program or visit new website.
 
 
